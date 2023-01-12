@@ -1,0 +1,8 @@
+
+NCROOT=/opt/netcdf-4.1.1-ifort
+NCDF=-I$(NCROOT)/include -L$(NCROOT)/lib -lnetcdf
+
+F90=ifort -openmp -i-static
+FFLAGS= -O3   $(NCDF) -assume byterecl -convert big_endian
+INSTALL=$(HOME)/bin
+
